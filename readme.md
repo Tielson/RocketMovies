@@ -17,10 +17,10 @@
 <p align="center">
 	<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"/>
 </p>
-
 <h4 align="center">
-	Status: 🚀 Finalizado
+	Status: 🚀 Finished
 </h4>
+
 
 <p align="center">
 	<a href="#about">About</a> •
@@ -30,7 +30,7 @@
 
 ## About
 
-- A ideia foi criar o front-end da aplicação em React.js.
+- The idea was to create the front-end of the application in React.js.
 
   
 
@@ -38,7 +38,7 @@
 
   
 
-- Frameworks utilizados para fazer a aplicação:
+- Frameworks used to make the application:
 
   - Vite.Js
 
@@ -48,11 +48,6 @@
 
   - React-dom
 
-    
-
-    
-
-- <a href="https://github.com/Tielson/Aplicacao_em_Node">Repositório</a>
 
 
 
