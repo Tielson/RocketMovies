@@ -1,10 +1,10 @@
 <h1 align="center">
 	Challenge
 </h1>
-
 <h3 align="center">
-	Aplicação em Node
+	ReactJs
 </h3>
+
 
 
 
@@ -30,29 +30,25 @@
 
 ## About
 
-- Desafio em Node.js, consiste em criar uma aplicação onde o usuário cadastra um filme, preenche com algumas informações (nome, descrição, nota) e cria tags relacionadas a ele.
-
-- Diagrama que  pode ser usado como base:
-
-  ![desktop-preview](https://i.imgur.com/w7twvpX.png)
+- A ideia foi criar o front-end da aplicação em React.js.
 
   
 
-- Conhecimentos e Frameworks utilizados para fazer a parte logica do codigo:
+  ![IMGUR](https://i.imgur.com/50vfekS.png)
 
-  - Express
+  
 
-  - Nodemon
+- Frameworks utilizados para fazer a aplicação:
 
-  - Node modules
+  - Vite.Js
 
-  - Rotas e Metodos HTTP
+  - Styled-components
 
-  - Meddlewares
+  - React-router-dom
 
-  - App Error
+  - React-dom
 
-  - Banco de dados Sqlite
+    
 
     
 
