@@ -31,13 +31,13 @@ height: 100vh;
 }
 
 .note::-webkit-scrollbar {
-  height: 8px;
   width: 8px;
+  height: 4px;
 }
 
 
 .note::-webkit-scrollbar-thumb {
-  background-color: ${({theme})=> theme.COLORS.BACKGROUND_PINK2};
+  background-color: rgb(175 2 2);
   
   border-radius: 1.2rem;
   -webkit-border-radius: 1.2rem;
@@ -48,10 +48,8 @@ height: 100vh;
 
 .note::-webkit-scrollbar-corner {
   
-  height: 8px;
+  height: 4px;
 }
-
- 
 
 
 `

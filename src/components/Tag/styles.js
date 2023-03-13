@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.span`
-font-size: 12px;
+    width: 100%;
+    display: flex;
+p{
+    font-size: 12px;
 padding: 5px 12px;
 border-radius: 5px;
 margin-right: 6px;
 
-background-color: ${({ theme, gray500 }) =>  gray500 ? theme.COLORS.GRAY_500 : theme.COLORS.BACKGROUND_700};
-color: ${({ theme }) => theme.COLORS.GRAY_200};
+background-color:#312e3800;
+    color: #ffffff;
+    border: 1px solid;
+}
+
 
 `

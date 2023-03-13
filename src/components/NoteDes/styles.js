@@ -8,6 +8,7 @@ width: 100%;
     display: flex;
     margin-top: 15px;
     background-color: ${({  theme ,gray500 }) => gray500 ? theme.COLORS.GRAY_500 : "theme.COLORS.BACKGROUND_700"};
+
   }
 `
 

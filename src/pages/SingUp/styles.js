@@ -7,7 +7,7 @@ height: 100vh;
 display: grid;
 grid-template-columns: 50% 50%;
 grid-column: "cc dd";
-
+background-color: #000000;
 `
 export const Section = styled.div`
 width: 340px;
@@ -23,14 +23,15 @@ grid-area: "cc";
       font-weight: 700;
       font-size: 48px;
       line-height: 63px;
-      color: ${({theme})=> theme.COLORS.BACKGROUND_PINK2};
+      color: ${({ theme }) => theme.COLORS.WHITE};
+      font-family: 'Rampart One', cursive;
     }
     p{
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 18px;
-      color: ${({theme})=> theme.COLORS.GRAY_600};     
+      color: rgb(246 246 246);   
     }
   }
 
@@ -45,9 +46,9 @@ grid-area: "cc";
 `
 export const BackGround = styled.div`
 grid-area: "dd";
-background-image: url(../../../img/dd.png);
 background-repeat: no-repeat;
 background-size: 100% 100%;
+background-image: url(../../../img/WallpaperDog-10717345.jpg);
 `
 
 export const Form = styled.div`
@@ -68,7 +69,7 @@ export const Form = styled.div`
     font-size: 16px;
     line-height: 21px;
     text-align: center;
-    color: ${({theme}) => theme.COLORS.BACKGROUND_PINK2};
+    color: rgb(246 246 246);
     display: flex;
     margin-top: 42px;
     flex-direction: row;

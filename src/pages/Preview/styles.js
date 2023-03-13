@@ -9,13 +9,30 @@ export const Section = styled.div`
     max-width: 1336px;
     margin: auto;
 
+    .created{
+      display: flex;
+      align-items: flex-end;
+    }
+
+  
+.bc-iframe, .bc-iframe body, .bc-player-default_default, .bc-player-default_default .vjs-poster{
+    background-color: black ;
+}
+.video {
+    display: flex;
+    justify-content: center;
+  }
+  .bc-player-default_default {
+  min-width: 1000px;
+  min-height: 370px;
+  }
+
   >div{
  
   overflow: auto;
   >p{
      margin-top: 40px;
       padding-right: 10px;
-      height: 336px;
       font-weight:400;
       size:16px;
       line-height:21.1px;
@@ -81,7 +98,15 @@ width: 100%;
 `
 export const Creation = styled.div`
 width: 100%;
-margin-bottom: 48px;
+margin-bottom: 20px;
+
+`
+export const Buttons = styled.div`
+display: flex;
+justify-content: flex-start;
+gap: 8px;
+margin-top: 40px;
+width: 100%;
 
 `
 

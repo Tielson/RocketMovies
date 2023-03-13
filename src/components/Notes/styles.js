@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Container = styled.button`
 
 width: 100%;
-background-color: ${({ theme }) => theme.COLORS.PINK};
+background-color: rgb(12 12 12);
 
 border: none;
 border-radius: 10px;
@@ -13,7 +13,16 @@ border-radius: 10px;
 padding: 32PX;
 margin-bottom: 24px ; 
 
+display: flex;
+gap: 38px;
+
+img{
+    width: 186px;
+    height: 177px;
+    }
+
   .content{
+    flex-wrap: wrap;
     margin-top: 15px;
     height: 37px;
     overflow-y: hidden;
@@ -24,9 +33,12 @@ margin-bottom: 24px ;
 
     text-align: left;
     flex-direction: column;
-  }
 
-  >h1{
+ 
+
+     
+  }
+  h1{
     flex: 1;
     text-align: left;
     font-weight: 700;
@@ -34,6 +46,7 @@ margin-bottom: 24px ;
     color: ${({ theme }) => theme.COLORS.WHITE};
     margin-bottom: 8px;
   }
+  
 
 
 `

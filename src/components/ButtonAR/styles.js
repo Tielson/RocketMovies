@@ -16,9 +16,9 @@ align-items: center;
 gap: 8px;
 
 
-background-color: ${({ theme, add }) => add ? theme.COLORS.BACKGROUND_PINK2 : theme.COLORS.BACKGROUND_1000};
+background-color: ${({ theme, add }) => add ? "rgb(156 2 2)" : theme.COLORS.BACKGROUND_1000};
 
-color:  ${({ theme, add }) => add ?theme.COLORS.BACKGROUND_1000  : theme.COLORS.BACKGROUND_PINK2};
+color: rgb(255 250 250);
 
 font-style: normal;
 font-weight: 500;

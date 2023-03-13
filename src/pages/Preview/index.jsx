@@ -1,47 +1,103 @@
-import { Container, Arrow, Title, Creation, Section } from "./styles";
+import { Container, Arrow, Creation, Section, Buttons } from "./styles";
+import { useParams, useNavigate } from 'react-router-dom'
+
+import { FaRegEdit } from 'react-icons/fa';
 
 import { NoteDes } from "../../components/NoteDes";
 import { Header } from "../../components/Header";
 import { TfiArrowLeft } from 'react-icons/tfi'
 import { Details } from "../../components/Details";
 import { Link } from "react-router-dom";
+import { api } from './../../services/api';
+import { useState, useEffect } from "react";
+
+import ReactPlayerLoader from '@brightcove/react-player-loader';
+import ReactPlayer from "react-player";
+import { ButtonAR } from "../../components/ButtonAR";
+
 
 
 export function Preview() {
+
+  const [data, setData] = useState("0")
+  console.log(data)
+
+  const reactPlayerLoader = React.createElement(ReactPlayerLoader, {
+    accountId: `${data.accountid}`,
+    videoId: `${data.videoid}`,
+
+  })
+
+  const params = useParams()
+  const navigate = useNavigate()
+
+  function handleBack() {
+    navigate(-1)
+  }
+
+  async function handleDetails(id) {
+    const confirm = window.confirm("Certeza que deseja excluir?")
+
+    if (confirm) {
+      await api.delete(`/notes/${id}`)
+      navigate("/")
+    }
+
+  }
+
+
+  useEffect(() => {
+    async function fetchNotes() {
+      const response = await api.get(`/notes/preview/${params.id}`)
+      setData(response.data[0]?.[0])
+
+    }
+
+    fetchNotes()
+
+  }, [])
   return (
     <Container>
 
-      <Header />
+      <Header isActive={true} />
 
       <Section >
 
-          <Arrow>
-          <Link to="/"> <TfiArrowLeft /> <h1>Voltar</h1></Link> 
-          </Arrow>
+        <Arrow>
+          <Link to="/"> <TfiArrowLeft /> <h1>Voltar</h1></Link>
+        </Arrow>
         <div className="section">
-
-          <Title>
-
-          </Title>
-
           <Creation>
-            <Details title="Interestrellar" evaluation="4" />
+            <div className="created">
+              <Details created_at={data.created_at} title={data.title} evaluation={data.rating} />
+            </div>
+
+            <NoteDes gray500 data={{
+              tags: [{ id: `${data.id}`, name: `${data.name}` }]
+            }}
+            />
+
           </Creation>
 
-          <NoteDes gray500 data={{
-            tags: [{ id: "1", name: "Ficção Científica" },
-            { id: "1", name: "Drama" },
-            { id: "1", name: "Família" }]
-          }} />
+          <div className="video">
+            <video-js >{reactPlayerLoader}</video-js>
+            <video-js >{
+              data.youtube &&
+              <ReactPlayer url={data.youtube} controls="true" width="1000px" height="400px" />
+
+
+            }</video-js>
+          </div>
+
+
           <p>
-            Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se comunicar com ela. Pai e filha descobrem que o "fantasma" é uma inteligência desconhecida que está enviando mensagens codificadas através de radiação gravitacional, deixando coordenadas em binário que os levam até uma instalação secreta da NASA liderada pelo professor John Brand. O cientista revela que um buraco de minhoca foi aberto perto de Saturno e que ele leva a planetas que podem oferecer condições de sobrevivência para a espécie humana. As "missões Lázaro" enviadas anos antes identificaram três planetas potencialmente habitáveis orbitando o buraco negro Gargântua: Miller, Edmunds e Mann – nomeados em homenagem aos astronautas que os pesquisaram. Brand recruta Cooper para pilotar a nave espacial Endurance e recuperar os dados dos astronautas; se um dos planetas se mostrar habitável, a humanidade irá seguir para ele na instalação da NASA, que é na realidade uma enorme estação espacial. A partida de Cooper devasta Murphy.
-            <br />
-            <br />
-
-            Além de Cooper, a tripulação da Endurance é formada pela bióloga Amelia, filha de Brand; o cientista Romilly, o físico planetário Doyle, além dos robôs TARS e CASE. Eles entram no buraco de minhoca e se dirigem a Miller, porém descobrem que o planeta possui enorme dilatação gravitacional temporal por estar tão perto de Gargântua: cada hora na superfície equivale a sete anos na Terra. Eles entram em Miller e descobrem que é inóspito já que é coberto por um oceano raso e agitado por ondas enormes. Uma onda atinge a tripulação enquanto Amelia tenta recuperar os dados de Miller, matando Doyle e atrasando a partida. Ao voltarem para a Endurance, Cooper e Amelia descobrem que 23 anos se passaram.
-
+            {data.overview}
           </p>
         </div>
+
+        <Buttons>
+          <ButtonAR value="Excluir nota" onClick={() => handleDetails(data.note_id)} />
+        </Buttons>
       </Section>
     </Container>)
 }

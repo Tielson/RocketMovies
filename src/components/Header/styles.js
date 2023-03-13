@@ -8,8 +8,9 @@ justify-content: center;
 
 border-bottom-width: 1px;
 border-bottom-style: solid;
-border-bottom-color: ${({ theme }) => theme.COLORS.BORDER};
-background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+background: #b30000;
+
+border-bottom: 1px solid #fff7f7;
 
 `
 export const Box = styled.div`
@@ -37,7 +38,8 @@ export const H1 = styled.div`
   >h1{
     font-weight: 700;
     font-size: 24px;
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK2};
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    font-family: 'Rampart One', cursive;
  }
 
 `
@@ -64,16 +66,17 @@ grid-area:uu;
     border-radius: 50%;
     width: 64px;
     height: 64px;
+    border: 1px solid #15101054;
   }
   h1{
     font-weight: 700;
     font-size: 14px;
-    color: ${({theme}) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.WHITE};
   }
-  p{
-    font-weight: 400;
-    font-size: 14px;
-    color: ${({theme}) => theme.COLORS.GRAY_300};
+  button{
+    background: none;
+    border: none;
+    color: white;
   }
   div{
     display: flex;

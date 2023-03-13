@@ -1,8 +1,13 @@
 import { Container, TiSt, Creation } from "./styles";
 import { Stars } from "../Stars";
 import {FiClock} from 'react-icons/fi'
+import { useAuth } from "../../hooks/auth";
+import avatarPlaceHolder from "../../../img/avatar_placeholder.svg"
+import { api } from './../../services/api';
 
-export function Details({title,evaluation}){
+export function Details({title,evaluation, created_at}){
+  const {user} = useAuth()
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceHolder
 
   return(
     <Container>
@@ -10,11 +15,11 @@ export function Details({title,evaluation}){
         {title} <Stars evaluation={evaluation}/> 
       </TiSt>
       <Creation>
-        <img src="https://github.com/Tielson.png" alt="Foto de perfil" />
-        <p>Por Filipe Tielson</p>
+        <img src={avatarUrl} alt="Foto de perfil" />
+        <p>{user.name}</p>
         <FiClock/>
         <p> 
-          23/05/22 ás 08:00
+          {created_at}
         </p>
       </Creation>
     </Container>

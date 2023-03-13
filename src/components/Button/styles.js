@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.button`
 width: 100%;
 
-background-color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK2};
-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+background-color: #b30000;
+color:   #fbfbfb;;
 
 height: 56px;
 border: 0;
@@ -19,9 +19,9 @@ font-size: 16px;
     align-items: center;
 
     >svg{
-      width: 16px;
-      height: 16px;
-      color: ${({theme}) => theme.COLORS.BACKGROUND_PLUS};
+      width: 18px;
+      height: 18px;
+      color:  #fbfbfb;;
     }
 
   &:disabled {

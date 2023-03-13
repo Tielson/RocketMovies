@@ -17,7 +17,7 @@ padding-right:16px;
     background:none;
 
     svg{
-      color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK2}; 
+      color: rgb(198 2 2); 
       width: 22px;
       height: 24px;
 
@@ -26,10 +26,10 @@ padding-right:16px;
 
   >input{
     height:56px;
-    width: ${({ isNew }) => isNew ? `180px` : `113.16px`};
+    min-width: ${({ isNew }) => isNew ? `180px` : `113.16px`};
     border-radius: 10px;
 
-    padding:12px;
+    padding:8px;
     color: ${({ theme }) => theme.COLORS.WHITE};
     background-color: ${({ theme, isNew }) => isNew ? "transparent" : theme.COLORS.BACKGROUND_800};
 
