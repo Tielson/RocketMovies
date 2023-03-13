@@ -46,7 +46,7 @@ grid-area: "cc";
 `
 export const BackGround = styled.div`
 grid-area: "dd";
-background-image: url(../../../img/WallpaperDog-10717345.jpg);
+background-image: url("../../../img/WallpaperDog-10717345.jpg");
 background-repeat: no-repeat;
 background-size: 100% 100%;
 `

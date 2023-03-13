@@ -48,7 +48,7 @@ export const BackGround = styled.div`
 grid-area: "dd";
 background-repeat: no-repeat;
 background-size: 100% 100%;
-background-image: url(../../../img/WallpaperDog-10717345.jpg);
+background-image: url("../../../img/WallpaperDog-10717345.jpg");
 `
 
 export const Form = styled.div`
