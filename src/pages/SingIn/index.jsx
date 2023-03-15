@@ -1,7 +1,8 @@
 import { Container, BackGround, Section, Form } from "./styles";
-import { Input } from "../../components/Input";
-import { FiMail, FiLock } from 'react-icons/fi'
+import img from "../../../img/WallpaperDog-10717345.jpg"
 import { ButtonAR } from '../../components/ButtonAR'
+import { FiMail, FiLock } from 'react-icons/fi'
+import { Input } from "../../components/Input";
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 
@@ -59,8 +60,9 @@ export function SingIn() {
           <Link to="/SingUp"> Criar conta</Link>
         </Form>
       </Section>
-      <BackGround />
-
+      <BackGround >
+        <img src={img} alt="" />
+      </BackGround>
 
 
     </Container>

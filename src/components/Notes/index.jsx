@@ -9,7 +9,7 @@ export function Notes({ data, img, value, evaluation, ...rest }) {
 
         <img src={img} alt="dd" />
 </div>
-<div>
+<div className="ii">
       <h1>{data.title}</h1>
       <div className="content">
         <p>{value}</p>

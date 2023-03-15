@@ -1,8 +1,23 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
 export const Container = styled.button`
+ @media (max-width: 500px) {
+  .note{
+    button{
+      gap: 1;
+      width: auto;
+      justify-content: center;
+    }
+  }
+  
+.ii{
+.content{
+  display: none;
+}
+ }
+  }
+
 
 width: 100%;
 background-color: rgb(12 12 12);
@@ -47,6 +62,5 @@ img{
     margin-bottom: 8px;
   }
   
-
-
+ 
 `

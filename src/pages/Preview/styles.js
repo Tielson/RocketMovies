@@ -23,8 +23,8 @@ export const Section = styled.div`
     justify-content: center;
   }
   .bc-player-default_default {
-  min-width: 1000px;
-  min-height: 370px;
+  width: 80vmin;
+  height: 50vmin;
   }
 
   >div{
@@ -37,6 +37,7 @@ export const Section = styled.div`
       size:16px;
       line-height:21.1px;
       text-align:justify;
+      overflow: auto;
    }
 }
 

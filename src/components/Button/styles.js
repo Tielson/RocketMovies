@@ -27,5 +27,9 @@ font-size: 16px;
   &:disabled {
   opacity: 0.5;
   }
+
+  @media (max-width: 520px) {
+padding: 0 10px;
+  }
  
 `

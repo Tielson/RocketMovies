@@ -5,8 +5,6 @@ export const Container = styled.div`
 width: 100%;
 height: 100vh;
 
-
-
 `
 export const InputC = styled.div`
 width: 100%;
@@ -18,15 +16,57 @@ grid-template-columns: 350px 175px 500px;
 grid-template-areas: 
 'a b v'
 'p p v'
-
 ;
  >Textarea{
   width: 1113px;
- }
-;
+ };
 
+@media (max-width: 1170px) {
+  grid-template-rows: 55px 261px;
+    grid-template-columns: 248px 175px 45vmin;
+    padding: 0 10px;
+    gap: 10px;
+}
+@media (max-width: 820px) {
+  grid-template-rows: 55px 150px 45vmin;
+    grid-template-columns: 250px 200px;
+
+    grid-template-areas: 
+'a b '
+'p p '
+'v v '
+;
+}
+
+@media (max-width: 485px) {
+  grid-template-rows: 55px 150px 250px;
+    grid-template-columns: 250px 150px;;
+
+    grid-template-areas: 
+'a b '
+'p p '
+'v v '
+;
+}
+
+@media (max-width: 430px) {
+  grid-template-rows: 55px 55px 150px 45vmin;
+    grid-template-columns: 250px;
+
+    grid-template-areas: 
+'a'
+'b'
+'p'
+'v'
+;
+gap: 14px;
+}
 `
 export const Section = styled.div`
+
+@media (max-width: 1170px) {
+    padding: 0 10px;
+}
 
 display: flex;
     max-width: 1113px;
@@ -35,7 +75,7 @@ display: flex;
 
 .video{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
     grid-area: v;
@@ -44,12 +84,14 @@ display: flex;
     
 .ReactPlayer{
   border-radius: 10px;
+  width: 50vmin;
+  height:40vmin
 }
 
 
     .bc-player-default_default {
-  min-width: 50vmin;
-  min-height: 40vmin;
+      width: 50vmin;
+    height: 40vmin;
   border-radius: 5px;
   }
 
@@ -65,6 +107,67 @@ display: flex;
     width: 50vmin;
     height: 40vmin;
 }
+
+@media (max-width: 1170px) {
+  .bc-player-default_default {
+      width: 40vmin;
+    height: 35vmin;
+  }
+  .ReactPlayer{
+    iframe{
+      width: 100vmin;
+    height: 50vmin;
+    }
+  border-radius: 10px;
+}
+}
+@media (max-width: 910px) {
+  .r{
+    width: 40vmin;
+    height: 40vmin;
+  }
+  .ReactPlayer{
+    iframe{
+      width: 40vmin;
+    height: 40vmin;
+    }
+  border-radius: 10px;
+}
+}
+@media (max-width: 820px) {
+  .bc-player-default_default {
+    width: 60vmin;
+    height: 30vmin;
+  }
+
+  .r{
+    width: 70vmin;
+    height: 40vmin;
+  }
+  iframe{
+    width: 60vmin;
+  height: 40vmin;
+  }
+}
+  
+}
+
+@media (max-width: 650px) {
+  .bc-player-default_default {
+    width: 60vmin;
+    height: 40vmin;
+  }
+
+  .r{
+    width: 80vmin;
+    height: 40vmin;
+  }
+  iframe{
+    width: 80vmin;
+  height: 40vmin;
+  }
+}
+
 }
     
     max-width: 1113px;
@@ -76,8 +179,20 @@ display: flex;
   line-height: 26px;
   color: ${({ theme }) => theme.COLORS.GRAY_400};
   margin-bottom: 24px;
-  grid-area: p;
+  
 }
+
+.p{
+    grid-area: p;
+    overflow-y: auto;
+    box-shadow: 0px 0px 7px 3px #414a4a6b;
+    margin-bottom: 10px;
+  p{
+    color: #796959;
+
+  }
+}
+
 
   >h1{
     font-style: normal;
@@ -139,25 +254,18 @@ h1{
 export const Bookmarks = styled.div`
 width: 100%;
 min-height: 88px;
-background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
 border-radius: 8px;
 display: flex;
 flex-direction: row;
 align-items: center;
 padding-left: 16px;
-overflow-y: auto;
-
+flex-wrap: wrap;
 gap: 24px;
 
 `
 export const Buttons = styled.div`
 display: flex;
 justify-content: flex-end;
-gap: 8px;
-margin-top: 40px;
+margin-top: 32px;
 width: 100%;
-
-
 `
-
-

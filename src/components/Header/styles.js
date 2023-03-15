@@ -12,6 +12,15 @@ background: #b30000;
 
 border-bottom: 1px solid #fff7f7;
 
+@media (max-width: 570px) {
+  
+  display: none;
+  button{
+    width: 150px;
+  }
+
+  }
+
 `
 export const Box = styled.div`
 max-width: 1366px;
@@ -24,6 +33,18 @@ grid-template-rows:116px;
 grid-template-areas: 
 "hh ii uu"
 ;
+
+@media (max-width: 1150px) {
+  grid-auto-columns: auto 500px auto;
+  gap: 55px;
+}
+@media (max-width: 955px) {
+  grid-auto-columns: auto 300px auto;
+}
+@media (max-width: 760px) {
+  grid-auto-columns: auto 200px auto;
+  gap: 30px;
+}
 
 `
 
@@ -42,6 +63,12 @@ export const H1 = styled.div`
     font-family: 'Rampart One', cursive;
  }
 
+ @media (max-width: 760px) {
+  h1{
+    font-size: 20px;
+  }
+}
+
 `
 
 export const Inp = styled.div`
@@ -51,6 +78,7 @@ width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
 
 `
 export const User = styled.div`
@@ -84,4 +112,6 @@ grid-area:uu;
     flex-direction: column;
     align-items: flex-end;
   }
+
+
 `

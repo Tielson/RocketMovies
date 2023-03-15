@@ -94,7 +94,7 @@ export function Movie() {
     if (!star) {
       return alert("Escolha uma nota de 0 a 5")
     }
-    if (star > 5  || star < 0  ) {
+    if (star > 5 || star < 0) {
       return alert("Escolha uma nota de 0 a 5")
     }
     if (newTag) {
@@ -124,7 +124,7 @@ export function Movie() {
         name: tags
       })
 
-    return  document.location.reload(true);
+      return document.location.reload(true);
     }
 
     alert("Filme já adicionado")
@@ -175,7 +175,9 @@ export function Movie() {
               onChange={e => setStar(e.target.value)}
             />
 
-            <p>{overview}</p>
+              <div className="p">
+                <p>{overview}</p>
+              </div>
             <div className="video">
               <video-js >
                 {
@@ -186,6 +188,7 @@ export function Movie() {
                   <ReactPlayer
                     url={youtube}
                     controls="true"
+                    className="r"
                     width="50vmin"
                     height="40vmin"
                   />}

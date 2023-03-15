@@ -4,11 +4,11 @@ import { HiOutlinePlus } from 'react-icons/hi'
 import { Notes } from "../../components/Notes"
 
 import { Container } from "./styles"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import { api } from "../../services/api"
 import { useState, useEffect } from "react"
-import { useAuth } from "../../hooks/auth"
+import { FcSearch } from 'react-icons/fc';
 
 
 
@@ -16,8 +16,7 @@ export function Home() {
   const [allFilm, setAllFilm] = useState([])
   const [filmSelected, setFilmSelected] = useState([])
 
-  const f =   filmSelected[0] == undefined ?    allFilm[0] :   filmSelected[0]
-  console.log(f)
+  const f = filmSelected[0] == undefined ? allFilm[0] : filmSelected[0]
 
   const navigate = useNavigate()
 
@@ -33,30 +32,40 @@ export function Home() {
     setFilmSelected(filter)
   }
 
+  function handleInput(verify) {
+    document.querySelector(".hh").classList.toggle('hidden')
+  }
+
   useEffect(() => {
     const filmsSelected = api.get(`/notes/show`)
     filmsSelected
-    .then(data => setAllFilm(data.data))
-    .catch(()=>alert("Não autorizado,faça o login novamente."), )
+      .then(data => setAllFilm(data.data))
+      .catch(() => alert("Não autorizado,faça o login novamente."),)
 
   }, [])
   return (
     <Container>
-      <Header handleSearch={handleSearch}  />
+      <Header className="header" handleSearch={handleSearch} />
       <main>
+        <div className="inputButton">
+          <button className="cc" onClick={() => handleInput()}>
+            <FcSearch />
+          </button>
+          <div className="hh hidden">
+            <input type="text" onChange={e => handleSearch(e.target.value)} />
+          </div>
+        </div>
         <div className="content">
           <h1>Meus filmes</h1>
-          <Link to="/movie">
-            <Button
-              value="Adicionar filme"
-              icon={HiOutlinePlus}>
-            </Button>
-          </Link>
+          <Button onClick={() => navigate("/movie")}
+            value="Adicionar filme"
+            icon={HiOutlinePlus}>
+          </Button>
         </div>
 
-        <div className="note">
+        <div className="notes">
           {
-    f?.map((film, Index) => (
+            f?.map((film, Index) => (
               <Notes
                 onClick={() => handleDetails(film.note_id, Index)}
                 key={String(Index + 2)}

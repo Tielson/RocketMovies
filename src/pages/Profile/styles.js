@@ -34,8 +34,14 @@ align-items: center;
     line-height: 21px;
   
    }
+   
 }
+@media (max-width: 620px) {
+  >button{
 
+    margin-left: 19px;
+  }
+}
 
 `
 export const Avatar = styled.div`
@@ -100,6 +106,11 @@ align-items: center;
     border: none;
     background-color: rgb(164 0 0);
 
+  }
+
+  @media ( max-width: 400px) {
+    width: 280px;
+    padding: 18px 8px;
   }
 
 

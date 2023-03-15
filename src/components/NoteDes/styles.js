@@ -10,6 +10,11 @@ width: 100%;
     background-color: ${({  theme ,gray500 }) => gray500 ? theme.COLORS.GRAY_500 : "theme.COLORS.BACKGROUND_700"};
 
   }
+
+    
+  @media (max-width: 760px) {
+display: none;
+}
 `
 
 

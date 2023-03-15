@@ -6,6 +6,7 @@ import { ButtonAR } from '../../components/ButtonAR'
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import { useState } from 'react';
+import img from "../../../img/WallpaperDog-10717345.jpg"
 
 export function SingUp() {
   const [name, setName] = useState("")
@@ -63,7 +64,10 @@ export function SingUp() {
           <Link to="/"><TfiArrowLeft />  Voltar para o login </Link>
         </Form>
       </Section>
-      <BackGround />
+
+      <BackGround >
+      <img src={img} alt="" />
+      </BackGround>
 
 
 
