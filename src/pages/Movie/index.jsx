@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { Films } from "../../hooks/films";
 import { api } from './../../services/api';
 import { useEffect, useState } from 'react';
+import React from 'react';
 
 import ReactPlayer from "react-player";
 

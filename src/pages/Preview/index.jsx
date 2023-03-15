@@ -1,8 +1,7 @@
 import { Container, Arrow, Creation, Section, Buttons } from "./styles";
 import { useParams, useNavigate } from 'react-router-dom'
 
-import { FaRegEdit } from 'react-icons/fa';
-
+import React from 'react';
 import { NoteDes } from "../../components/NoteDes";
 import { Header } from "../../components/Header";
 import { TfiArrowLeft } from 'react-icons/tfi'

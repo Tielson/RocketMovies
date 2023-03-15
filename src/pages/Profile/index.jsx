@@ -8,6 +8,7 @@ import { ButtonAR } from '../../components/ButtonAR'
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import { api } from "../../services/api";
+import React from 'react';
 
 import { useAuth } from '../../hooks/auth'
 
