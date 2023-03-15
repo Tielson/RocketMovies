@@ -168,10 +168,6 @@ display: flex;
   }
 }
 
-}
-    
-    max-width: 1113px;
-    margin:14px auto;
     p{
   font-style: normal;
   font-weight: 400;
