@@ -2,5 +2,5 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: 'https://fly.io/apps/solitary-river-9928/monitoring'
+    baseURL: 'https://cute-red-chameleon-cap.cyclic.app'
 })
