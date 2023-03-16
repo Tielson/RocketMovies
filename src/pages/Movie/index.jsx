@@ -109,7 +109,7 @@ export function Movie() {
 
     const response = await api.get("/notes/toCheck")
     const filterResponse = response.data.filter(e => e.title === title)
-    console.log(filterResponse)
+    
     if (filterResponse.length === 0) {
       await api.post("/notes", {
         title,
@@ -176,14 +176,15 @@ export function Movie() {
               onChange={e => setStar(e.target.value)}
             />
 
-              <div className="p">
-                <p>{overview}</p>
-              </div>
+            <div className="p">
+              <p>{overview}</p>
+            </div>
             <div className="video">
               <video-js >
-                {
+                {title &&
                   reactPlayerLoader
                 }
+
                 {
                   youtube &&
                   <ReactPlayer

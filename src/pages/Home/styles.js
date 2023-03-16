@@ -74,25 +74,19 @@ height: 100vh;
   svg{
   }
 }
-    .search{
- 
-     
-
-     }
 
     >div{
-      position: absolute;
+    position: absolute;
     right: 77px;
     top: 45px;
 
     input{
-
     width: 250px;
     height: 30px;
     background-color: #ffffff3b;
     border: none;
     border-radius: 5px;
-
+    padding: 10px;
        }
     }
 

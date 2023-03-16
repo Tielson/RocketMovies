@@ -32,15 +32,24 @@ export function Home() {
     setFilmSelected(filter)
   }
 
-  function handleInput(verify) {
+  function handleInput() {
     document.querySelector(".hh").classList.toggle('hidden')
   }
 
   useEffect(() => {
+
     const filmsSelected = api.get(`/notes/show`)
     filmsSelected
       .then(data => setAllFilm(data.data))
-      .catch(() => alert("Não autorizado,faça o login novamente."),)
+      .catch((error) => {
+        if (error.response) {
+          alert(error.response.data.message)
+        }
+        else {
+          alert("Não autorizado ,faça o login novamente.")
+      }
+      }
+      )
 
   }, [])
   return (
@@ -81,12 +90,8 @@ export function Home() {
             ))
           }
 
-
         </div>
-
       </main>
-
-
     </Container >
   )
 }
