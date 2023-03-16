@@ -1,18 +1,16 @@
 
-/movie  https://rocketmoviees.netlify.app/movie/
-/profile https://rocketmoviees.netlify.app/profile/
-/preview/:id https://rocketmoviees.netlify.app/preview/
-
 [[redirects]]
 from = "/movie"
 to = "https://rocketmoviees.netlify.app/movie/"
 status = 301
 force = false
+
 [[redirects]]
 from = "/profile"
 to = "https://rocketmoviees.netlify.app/profile/"
 status = 301
 force = false
+
 [[redirects]]
 from = "/preview/:id"
 to = "https://rocketmoviees.netlify.app/preview/"
