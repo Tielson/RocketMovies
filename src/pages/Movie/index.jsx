@@ -125,13 +125,13 @@ export function Movie() {
         name: tags
       })
 
-      return document.location.reload(true);
+      return 
     }
 
     alert("Filme já adicionado")
 
   }
-  
+
   useEffect(() => {
     addNewTagInformation()
   }, [title])
