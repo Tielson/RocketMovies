@@ -40,9 +40,9 @@ export function Header({handleSearch, isActive}) {
             <h1>{user.name}</h1>
             <button onClick={handleSignUp}>Sair</button>
           </div>
-          <a href="/profile">
+          <button onClick={()=> navigate("/profile")}>
             <img src={avatarUrl} alt="Foto de perfil" />
-          </a>
+          </button>
         </User>
       </Box>
     </Container>

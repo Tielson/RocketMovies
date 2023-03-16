@@ -22,7 +22,7 @@ export function Home() {
   const navigate = useNavigate()
 
 
-  function handleDetails(id, index) {
+  function handleDetails(id) {
     navigate(`/preview/${id}`)
   }
 
