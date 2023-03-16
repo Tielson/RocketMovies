@@ -18,11 +18,11 @@ export function Home() {
 
   const f = filmSelected[0] == undefined ? allFilm[0] : filmSelected[0]
 
+
   const navigate = useNavigate()
 
 
   function handleDetails(id, index) {
-    console.log(index)
     navigate(`/preview/${id}`)
   }
 

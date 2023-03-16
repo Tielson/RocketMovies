@@ -19,7 +19,6 @@ import { ButtonAR } from "../../components/ButtonAR";
 export function Preview() {
 
   const [data, setData] = useState("0")
-  console.log(data)
 
   const reactPlayerLoader = React.createElement(ReactPlayerLoader, {
     accountId: `${data.accountid}`,
