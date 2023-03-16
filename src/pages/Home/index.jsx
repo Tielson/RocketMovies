@@ -57,6 +57,7 @@ export function Home() {
       <Header className="header" handleSearch={handleSearch} />
       <main>
         <div className="inputButton">
+          
           <button className="cc" onClick={() => handleInput()}>
             <FcSearch />
           </button>

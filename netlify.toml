@@ -1,5 +1,0 @@
-[[redirects]]
-from = "/*"
-to = "https://rocketmoviees.netlify.app/:splat"
-status = 200
-force = false
