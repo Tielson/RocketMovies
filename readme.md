@@ -34,7 +34,7 @@
 
   
 
-  ![IMGUR](https://i.imgur.com/50vfekS.png)
+  ![IMGUR](https://i.imgur.com/xAFzf02.png)
 
   
 
@@ -47,6 +47,8 @@
   - React-router-dom
 
   - React-dom
+ 
+    Deploy: https://rocketmoviees.netlify.app/
 
 
 
